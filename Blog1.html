@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition for Healthier Periods</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: #f8bbd0;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #880e4f;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: #880e4f;
+      font-weight: 600;
+      margin-left: 20px;
+      font-size: 1rem;
+    }
+
+    .navbar nav a:hover {
+      color: #e91e63;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e91e63;
+      margin: 40px 20px 20px;
+      font-size: 2rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card-front {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .card-back {
+      background: white;
+      transform: rotateY(180deg);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card-back h3 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+
+    .card-back p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">🌸 MenstrualAware</div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <h2>Nutrition for Healthier Periods</h2>
+
+  <div class="blog-grid">
+    <!-- All your flip cards here (unchanged) -->
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.00ABx82LIYnMbAvf3I4KXQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3');">
+          Leafy Greens
+        </div>
+        <div class="card-back">
+          <h3>Leafy Green Vegetables</h3>
+          <p>Spinach, kale, and amaranth are rich in iron and magnesium, which help replenish blood loss and reduce fatigue.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://thumbs.dreamstime.com/b/basket-citrus-fruit-vitamin-health-freshness-wood-table-brick-background-71818992.jpg');">
+          Bananas & Citrus
+        </div>
+        <div class="card-back">
+          <h3>Fruits (Bananas & Citrus)</h3>
+          <p>High in fiber, potassium, and vitamin C, fruits like bananas, oranges, and papayas reduce bloating and improve mood.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/omega-3-rich-foods-1296x728-feature.jpg?w=1155&h=1528');">
+          Omega-3 Foods
+        </div>
+        <div class="card-back">
+          <h3>Omega-3 Rich Foods</h3>
+          <p>Salmon, flaxseeds, and walnuts reduce inflammation, ease cramps, and stabilize mood swings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://t4.ftcdn.net/jpg/07/93/30/29/360_F_793302953_3ZGUDGHkrkKqQZZVbHyaWk6HqbgVLS6D.jpg');">
+          Dark Chocolate
+        </div>
+        <div class="card-back">
+          <h3>Dark Chocolate</h3>
+          <p>70% cocoa dark chocolate contains magnesium and antioxidants to relax muscles and reduce cravings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://elementalnutritionandwellness.com/blog/wp-content/uploads/2021/08/Nuts-and-Seeds-scaled.jpeg');">
+          Nuts & Seeds
+        </div>
+        <div class="card-back">
+          <h3>Nuts and Seeds</h3>
+          <p>Almonds, sunflower seeds, and pumpkin seeds are packed with healthy fats, zinc, and vitamin E to balance hormones.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.-bFR0F0jdazt-eKbVQeINwHaE9?w=700&h=469&rs=1&pid=ImgDetMain&o=7&rm=3');">
+          Whole Grains
+        </div>
+        <div class="card-back">
+          <h3>Whole Grains</h3>
+          <p>Brown rice, oats, and millets provide complex carbs and B-vitamins that improve energy and mood stability.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://readelysian.com/wp-content/uploads/2022/07/Shutterstock_1059447062-scaled.jpg');">
+          Herbal Teas
+        </div>
+        <div class="card-back">
+          <h3>Herbal Teas</h3>
+          <p>Chamomile, ginger, and peppermint tea reduce bloating, cramps, and help with sleep quality.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://static.vecteezy.com/system/resources/previews/033/109/674/non_2x/aesthetic-presentation-of-lentils-showcasing-their-beauty-against-a-gray-surface-ai-generated-photo.jpg');">
+          Iron-Rich Foods
+        </div>
+        <div class="card-back">
+          <h3>Iron-Rich Foods</h3>
+          <p>Lentils, tofu, jaggery, and raisins are great to replenish iron lost during periods and prevent fatigue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

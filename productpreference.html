@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Your Ideal Period Care</title>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e91e63;
+      color: white;
+      padding: 12px 20px;
+      /*border-radius: 10px;
+      margin-bottom: 20px;*/
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #e91e63;
+      text-align: center;
+    }
+
+    .quiz {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+      font-weight: 700;
+    }
+
+    button:hover {
+      background-color: #d21858;
+    }
+
+    #result {
+      margin-top: 20px;
+      background: #fde0ef;
+      padding: 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #880e4f;
+      min-height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🌸 MenstrualAware</div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <h2>💖 Find Your Ideal Period Care</h2>
+
+  <div class="quiz">
+    <!-- Quiz content as before -->
+    <div class="question">
+      <strong>1. How heavy is your flow?</strong><br />
+      <label><input type="radio" name="flow" value="light" /> Light</label>
+      <label><input type="radio" name="flow" value="medium" /> Medium</label>
+      <label><input type="radio" name="flow" value="heavy" /> Heavy</label>
+    </div>
+
+    <div class="question">
+      <strong>2. Do you prefer reusable or disposable products?</strong><br />
+      <label><input type="radio" name="reuse" value="reusable" /> Reusable</label>
+      <label><input type="radio" name="reuse" value="disposable" /> Disposable</label>
+      <label><input type="radio" name="reuse" value="no_pref" /> No preference</label>
+    </div>
+
+    <div class="question">
+      <strong>3. Are you comfortable using internal products (tampons, cups)?</strong><br />
+      <label><input type="radio" name="internal" value="yes" /> Yes</label>
+      <label><input type="radio" name="internal" value="no" /> No</label>
+    </div>
+
+    <div class="question">
+      <strong>4. Do you have sensitive skin or allergies?</strong><br />
+      <label><input type="radio" name="sensitive" value="yes" /> Yes</label>
+      <label><input type="radio" name="sensitive" value="no" /> No</label>
+    </div>
+
+    <div class="question">
+      <strong>5. Is eco-friendliness important to you?</strong><br />
+      <label><input type="radio" name="eco" value="yes" /> Yes</label>
+      <label><input type="radio" name="eco" value="no" /> No</label>
+      <label><input type="radio" name="eco" value="somewhat" /> Somewhat</label>
+    </div>
+
+    <div class="question">
+      <strong>6. What is your budget preference?</strong><br />
+      <label><input type="radio" name="budget" value="low" /> Low (affordable/disposable)</label>
+      <label><input type="radio" name="budget" value="medium" /> Medium</label>
+      <label><input type="radio" name="budget" value="high" /> High (willing to invest in reusable)</label>
+    </div>
+
+    <button onclick="suggestProduct()">Get My Recommendation</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function suggestProduct() {
+      const flow = document.querySelector('input[name="flow"]:checked');
+      const reuse = document.querySelector('input[name="reuse"]:checked');
+      const internal = document.querySelector('input[name="internal"]:checked');
+      const sensitive = document.querySelector('input[name="sensitive"]:checked');
+      const eco = document.querySelector('input[name="eco"]:checked');
+      const budget = document.querySelector('input[name="budget"]:checked');
+
+      if (!flow || !reuse || !internal || !sensitive || !eco || !budget) {
+        document.getElementById('result').innerHTML = "❗ Please answer all questions.";
+        return;
+      }
+
+      const f = flow.value;
+      const r = reuse.value;
+      const i = internal.value;
+      const s = sensitive.value;
+      const e = eco.value;
+      const b = budget.value;
+
+      let recommendation = "";
+
+      if (r === "reusable" && e === "yes" && b !== "low") {
+        if (i === "yes") {
+          recommendation = `<strong>🌿 Menstrual Cup</strong><br>Eco-friendly, reusable, and great for all flow levels.`;
+        } else {
+          recommendation = `<strong>🩲 Period Panties or Cloth Pads</strong><br>Reusable and gentle for sensitive skin. Perfect if you prefer no internal products.`;
+        }
+      } else if (r === "disposable") {
+        if (s === "yes") {
+          recommendation = `<strong>🌸 Hypoallergenic Pads</strong><br>Designed for sensitive skin, with breathable materials.`;
+        } else if (f === "heavy") {
+          recommendation = `<strong>🩸 Extra Absorbent Pads or Super Tampons</strong><br>To manage heavy flow comfortably.`;
+        } else if (i === "yes") {
+          recommendation = `<strong>🧴 Tampons</strong><br>Convenient and discreet for medium to light flow.`;
+        } else {
+          recommendation = `<strong>🩸 Regular Sanitary Pads</strong><br>Easy and widely used option.`;
+        }
+      } else if (r === "no_pref") {
+        recommendation = `<strong>🧴 Tampons or 🩸 Pads</strong><br>Both are good; try and see what suits you best.`;
+      } else {
+        recommendation = `<strong>🧸 Try Different Options</strong><br>Explore and choose what feels best for your body.`;
+      }
+
+      if (s === "yes") {
+        recommendation += `<br><em>Tip:</em> Go for fragrance-free, hypoallergenic options.`;
+      }
+      if (b === "low") {
+        recommendation += `<br><em>Budget Tip:</em> Reusables may cost more upfront but save money in the long run.`;
+      }
+
+      document.getElementById('result').innerHTML = recommendation;
+    }
+  </script>
+
+</body>
+</html>

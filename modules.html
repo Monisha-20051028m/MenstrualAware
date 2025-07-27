@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning Modules | MenstrualAware</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffe0e9, #fff5f9);
+      color: #333;
+    }
+
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e91e63;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e91e63;
+    }
+
+    .modules {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .modules h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #e91e63;
+    }
+
+    .module-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .module {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .module:hover {
+      transform: translateY(-5px);
+    }
+
+    .module img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .module h3 {
+      color: #e91e63;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .module p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #d21858;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #fff;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 500px) {
+      .modules h2 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🌸 MenstrualAware</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <!--<a href="modules.html">Modules</a>-->
+    </nav>
+  </header>
+
+  <section class="modules">
+    <h2>Interactive Learning</h2>
+    <div class="module-cards">
+      <div class="module">
+        <img src="https://www.cast-pharma.com/wp-content/uploads/2014/10/project-assisted-reproduction.jpg" alt="Module 1">
+        <h3>Menstrual Cycle Basics</h3>
+        <p>Learn what is menstrual cycle and what happens in your body?</p>
+        <a href="https://youtu.be/lD5OI9936DY?si=A9sR_p4vWm0Impeq" class="btn" target="_blank">Open Module</a>
+
+      </div>
+      <div class="module">
+        <img src="https://i0.wp.com/www.naaree.com/wp-content/uploads/2020/09/feminine-hygiene.jpg" alt="Module 2">
+        <h3>Healthy Hygiene</h3>
+        <p>How to stay clean and comfortable during your period?</p>
+        <a href="https://youtu.be/AEe1d7Dw_IA?si=Y0TkHtQ9vDOVvReP" class="btn" target="_blank">Open Module</a>
+      </div>
+      <div class="module">
+        <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/napkin.jpg" alt="Module 3">
+        <h3>Disposing Pads Safely</h3>
+        <p>Learn proper waste disposal to keep the environment clean.</p>
+        <a href="https://youtu.be/RjybC6_d1U0?si=HlffI5bEscCvNrzE" class="btn" target="_blank">Open Module</a>
+      </div>
+      <div class="module">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/articles/2016/03/tampon-facts-1487212042.jpg?resize=640:*" alt="Module 4">
+        <h3>Tools that help -1</h3>
+        <p>How to use tampons?</p>
+        <a href="https://youtu.be/5ECfobwUhsM?si=nyq411jsMvSkL1en" class="btn" target="_blank">Open Module</a>
+      </div>
+       <div class="module">
+        <img src="https://i.ytimg.com/vi/ErtRFI6iCnk/maxresdefault.jpg" alt="Module 4">
+        <h3>Tools that help -2</h3>
+        <p>How to insert a menstrual cup?</p>
+        <a href="https://youtu.be/dqHBdE54iaE?si=R69sAkij75JF97VM" class="btn" target="_blank">Open Module</a>
+      </div>
+      <div class="module">
+        <img src="https://th.bing.com/th/id/OIP.RpX8uGw6h0FSjXRB8xQIyAHaD4?w=335&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Module 4">
+        <h3>Menstruation Vs Mentral Health</h3>
+        <p>How is a period related to women's mental health?</p>
+        <a href="https://youtu.be/7bLQH4LqtWk?si=rqMJSNzLng3cH094" class="btn" target="_blank">Open Module</a>
+      </div>
+       <div class="module">
+        <img src="https://t4.ftcdn.net/jpg/03/48/30/31/360_F_348303159_VF4dn0LAoA88tBFTyuOUXkRdGcRuGtUb.jpg" alt="Module 4">
+        <h3>Why periods?</h3>
+        <p>Learn why women have their periods.</p>
+        <a href="https://youtu.be/cjbgZwgdY7Q?si=V_JaSeSXNAgmckFq" class="btn" target="_blank">Open Module</a>
+      </div>
+      <div class="module">
+        <img src="https://i.ytimg.com/vi/Mc5iK0AtGNc/maxresdefault.jpg" alt="Module 4">
+        <h3>What is PCOs?</h3>
+        <p>Learn what is PCOS and its relation with menstruation.</p>
+        <a href="https://youtu.be/RMWy9_CQZxc?si=Ul-iJUZexI9mP0eq" class="btn" target="_blank">Open Module</a>
+      </div>
+      <div class="module">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.lvBMkYHRewIxCX3NeyVVjgHaC2?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Module 4">
+        <h3>what happens inside the uterus?</h3>
+        <p>Learn what is period looks like inside the uterus.</p>
+        <a href="https://youtu.be/BaT3WS-vz_w?si=Icgp58oMTk7grUUA" class="btn" target="_blank">Open Module</a>
+      </div>
+      <div class="module">
+        <img src="https://th.bing.com/th/id/OIP.tM9G5PlUxGu1YVp6ywJXpgHaEJ?w=296&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Module 4">
+        <h3>Period Cramps?</h3>
+        <p>Learn how to deal with period cramps.</p>
+        <a href="https://youtu.be/vU3LmEc-hCI?si=0i-0y1tjSerhcaWt" class="btn" target="_blank">Open Module</a>
+      </div>
+    <div class="module">
+        <img src="https://yogajala.com/wp-content/uploads/2021/10/The-6-Best-Yoga-Positions-To-Help-Period-Cramps-4-1024x644.jpg" alt="Module 4">
+        <h3>Yoga to heal?</h3>
+        <p>Learn effective Yoga asanas.</p>
+        <a href="https://youtu.be/rDpzP6wQOEs?si=eV8hyKdRyq4Mhdyl" class="btn" target="_blank">Open Module</a>
+      </div>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MenstrualAware | Education is Power 💪</p>
+  </footer>
+
+</body>
+</html>
